@@ -1,0 +1,108 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Dm Sans";
+}
+.container {
+  position: relative;
+}
+.hero-section {
+  background-color: #029f58;
+  height: 100vh;
+  width: 100%;
+}
+/* .overlay {
+  position: absolute;
+  inset: 0 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+} */
+nav {
+  background-color: transparent;
+  width: 100%;
+  z-index: 9999;
+  height: 10rem;
+}
+
+div.logo {
+  display: inline-block;
+  padding: 0 100px;
+  height: 8rem;
+  padding-top: 60px;
+}
+
+nav ul {
+  float: right;
+  margin-right: 30px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 10rem;
+  margin: 0 2.1875rem;
+  font-weight: 500;
+}
+
+nav ul li a {
+  font-size: 20px;
+  color: white;
+}
+
+.checkbtn {
+  font-size: 1.875rem;
+  color: white;
+  float: right;
+  line-height: 8rem;
+  margin-right: 2.5rem;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 952px) {
+  div.logo {
+    font-size: 1.875rem;
+    padding-left: 3.125rem;
+    padding-top: 45px;
+  }
+  nav ul li a {
+    font-size: 16px;
+    color: white;
+  }
+}
+@media (max-width: 858px) {
+  .checkbtn {
+    display: block;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 8rem;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 1.25rem;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
